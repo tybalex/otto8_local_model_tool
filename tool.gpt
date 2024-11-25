@@ -1,0 +1,15 @@
+---
+Name: LocalLLM
+Description: This tool allows you to talk to a local LLM model.
+Param: message: The message to send to the LLM model
+
+
+#!/usr/bin/env python3 ${GPTSCRIPT_TOOL_DIR}/main.py
+
+---
+!metadata:*:category
+LocalModel
+
+---
+!metadata:*:icon
+https://cdn.jsdelivr.net/npm/@phosphor-icons/core@2/assets/duotone/file-text-duotone.svg 
