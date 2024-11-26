@@ -1,7 +1,9 @@
 import openai
 import os
 
-client = openai.OpenAI(api_key="sk-", base_url="http://127.0.0.1:1234/v1/")
+local = "http://127.0.0.1:1234/v1/"
+mac_docker_host = "host.docker.internal:1234/v1/"
+client = openai.OpenAI(api_key="sk-", base_url=mac_docker_host)
 
 def get_oai_response(model, functions, msgs):
   
