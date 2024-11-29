@@ -24,12 +24,12 @@ def get_oai_response(model, functions, msgs):
 
 def main():
     user_query = os.getenv("MESSAGE")
+    model = os.getenv("MODEL", "Llama-3-8b-function-calling-alpha-v1.gguf")
     if not user_query or user_query == "":
         print("MESSAGE environment variable is not set or empty.")
         return
     system_prompt = "You are a helpful assistant."
     msgs = [{"role": "system", "content":system_prompt} ,{"role": "user", "content": user_query}]
-    model = "Llama-3-8b-function-calling-alpha-v1.gguf"
     res = get_oai_response(model=model, functions=[], msgs=msgs)
     print(res)
 
